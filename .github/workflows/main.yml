@@ -26,8 +26,8 @@ jobs:
     
     - name: Build Docker Image
       run: |
-        docker build -t alegnta/kchds-front:latest .
+        docker build -t alegnta/kchds-client:latest .
         echo "rn3B6fAAYX.!xZV" | docker login --username alegnta --password-stdin
 
     - name: Push Docker Image
-      run: docker push alegnta/kchds-front:latest
+      run: docker push alegnta/kchds-client:latest
