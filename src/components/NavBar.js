@@ -1,6 +1,12 @@
-import React, { Fragment } from "react";
+import React, { useState, Fragment } from "react";
 
 function NavBar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <Fragment>
       <header className="th-header header-layout-default" id="navBar-sec">
@@ -32,7 +38,13 @@ function NavBar() {
               <div className="row align-items-center justify-content-between">
                 <div className="col-auto">
                   <div className="header-log text-3xl ml-14">
-                    <img style={{width:'80px', height:'80px'}} src="assets/img/pbe-RE_logo-01-removebg-preview.png"></img>ትብብር ቤት</div>
+                    <img
+                      style={{ width: "80px", height: "80px" }}
+                      src="assets/img/pbe-RE_logo-01-removebg-preview.png"
+                      alt="Logo"
+                    />
+                    ትብብር ቤት
+                  </div>
                 </div>
                 <div className="col-auto ml-10">
                   <nav className="main-menu d-none d-lg-inline-block">
@@ -40,23 +52,18 @@ function NavBar() {
                       <li className="menu-item-has-children">
                         <a href="/">Home</a>
                       </li>
-
                       <li className="menu-item-has-children">
                         <a href="#about-sec">About Us</a>
                       </li>
-
                       <li className="menu-item-has-children">
                         <a href="#category-sec">Categories</a>
                       </li>
-
                       <li className="menu-item-has-children">
                         <a href="#service-sec">Service</a>
                       </li>
-
                       <li className="menu-item-has-children">
                         <a href="#steps-sec">Steps</a>
                       </li>
-
                       <li className="menu-item-has-children">
                         <a href="#role-sec">Role</a>
                       </li>
@@ -65,9 +72,60 @@ function NavBar() {
                   <button
                     type="button"
                     className="th-menu-toggle d-block d-lg-none"
+                    onClick={toggleMenu}
                   >
                     <i className="far fa-bars" />
                   </button>
+
+                  {isMenuOpen && (
+                    <div className="mobile-menu">
+                      <nav className="main-menu">
+                        <ul>
+                          <li className="menu-item-has-children">
+                            <a href="/">Home</a>
+                          </li>
+                          <li className="menu-item-has-children">
+                            <a href="#about-sec">About Us</a>
+                          </li>
+                          <li className="menu-item-has-children">
+                            <a href="#category-sec">Categories</a>
+                          </li>
+                          <li className="menu-item-has-children">
+                            <a href="#service-sec">Service</a>
+                          </li>
+                          <li className="menu-item-has-children">
+                            <a href="#steps-sec">Steps</a>
+                          </li>
+                          <li className="menu-item-has-children">
+                            <a href="#role-sec">Role</a>
+                          </li>
+                          <li>
+                            <button
+                              type="button"
+                              className="icon-btn searchBoxToggler"
+                            >
+                              <i className="far fa-search" />
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              type="button"
+                              className="icon-btn sideMenuToggler"
+                            >
+                              <i className="fas fa-grid" />
+                            </button>
+                          </li>
+                          <li>
+                            <a href="/signup" className="th-btn ml-20">
+                              Become A Member{" "}
+                              <i className="fas fa-arrow-right ms-1" />
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  )}
+                  
                 </div>
                 <div className="col-auto d-none d-xl-block">
                   <div className="row">
