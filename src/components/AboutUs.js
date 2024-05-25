@@ -29,46 +29,47 @@ function AboutUs() {
                       src="assets/img/icon/subtitle-img2-1.svg"
                       alt="img"
                     />
-                    About Us Company
+                    Goal of Kegeberew Real Estate
                   </span>
                   <h2 className="sec-title">
                     Real Estate Excellence, Your Lifestyle Upgrade
                   </h2>
                 </div>
                 <p className="mt-n2 mb-25">
-                  Real estate construction companies may also engage in sales
-                  and marketing activities to promote their developed
-                  properties. This includes creating marketing strategies,
-                  conducting property tours.
-                </p>
-                <p className="mb-35">
-                  Post-construction, real estate construction companies may
-                  provide after-sales services, including maintenance support
+                  In the world huge success were achieved not individually but
+                  being in collaboration with others. Construct your houses
+                  collaboratively.
                 </p>
                 <div className="row">
                   <div className="col-lg-6">
                     <div className="checklist style5 mb-45">
                       <ul>
-                        <li>Quality Architect Designs</li>
-                        <li>Highly Professional Members</li>
-                        <li>High Quality Land space</li>
+                        <li>Organize 100 groups in the next 2 months.</li>
+                        <li>
+                          In the next year, enable approximately 5,000 people to
+                          become homeowners.
+                        </li>
+                        <li>Provide special services for diasporas.</li>
                       </ul>
                     </div>
                   </div>
                   <div className="col-lg-6">
                     <div className="checklist style5 mb-45">
                       <ul>
-                        <li>Deliver Always on Time</li>
-                        <li>100% Satisfaction Guarantee</li>
-                        <li>Affordable Pricing</li>
+                        <li>Develop real city dwellings.</li>
+                        <li>
+                          Resolve housing demand issues and make significant
+                          contributions to addressing this issue.
+                        </li>
+                        <li>Avail this service in all regional states.</li>
                       </ul>
                     </div>
                   </div>
                 </div>
-                <a href="about.html" className="th-btn">
+                <button className="th-btn">
                   ABOUT MORE
                   <i className="far fa-arrow-right ms-2" />
-                </a>
+                </button>
               </div>
             </div>
           </div>

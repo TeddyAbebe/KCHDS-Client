@@ -88,6 +88,7 @@ function Steps() {
     <Fragment>
       <section
         className="space process-sec"
+        id="steps-sec"
         data-overlay="title"
         data-opacity={9}
         data-bg-src="assets/img/update1/bg/process_bg_1.jpg"

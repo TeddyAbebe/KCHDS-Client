@@ -1,8 +1,86 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useEffect, useRef } from "react";
 import $ from "jquery";
 import "slick-carousel";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+const Categories = [
+  {
+    imgSrc: "assets/img/properties/downtown.jpg",
+    iconClass: "fas fa-city",
+    title: "Downtown (First Grade Central City Areas)",
+    text: "10-20 million",
+    Features: [
+      "4 Floor Houses",
+      "25 Floor Residential Apartment Houses",
+      "100 Organizing people",
+    ],
+    detailsLink: "service-details.html",
+  },
+  {
+    imgSrc: "assets/img/properties/midtown.jpg",
+    iconClass: "fas fa-building",
+    title: "Midtown (Second Grade central city areas)",
+    text: "7-10 million",
+    Features: [
+      "4 Floor houses",
+      "15 Floor Residential Apartment Houses",
+      "60 organizing people",
+    ],
+    detailsLink: "service-details.html",
+  },
+  {
+    imgSrc: "assets/img/properties/suburban.jpg",
+    iconClass: "fas fa-home",
+    title: "Sub-Urban (Third Grade city margin areas)",
+    text: "4-7 million",
+    Features: [
+      "4 Floor houses",
+      "8 Floor Residential Apartment Houses",
+      "32 organizing people",
+    ],
+    detailsLink: "service-details.html",
+  },
+  {
+    imgSrc: "assets/img/properties/single_familly.jpg",
+    iconClass: "fas fa-home",
+    title: "Single family",
+    text: "4-12 million Birr",
+    Features: [
+      "Luxury: 10-12 million Birr",
+      "Medium: 7-10 million Birr",
+      "Fair: 4-7 million Birr",
+    ],
+    detailsLink: "service-details.html",
+  },
+  {
+    imgSrc: "assets/img/properties/diaspora.jpg",
+    iconClass: "fas fa-plane",
+    title: "Diaspora",
+    text: "4-12 million Birr",
+    Features: [
+      "Downtown: 10-12 million Birr",
+      "Midtown: 7-10 million Birr",
+      "SubUrb: 4-7 million Birr",
+      "Single Family: 10-12 million Birr",
+    ],
+    detailsLink: "service-details.html",
+  },
+  {
+    imgSrc: "assets/img/properties/business_shops.jpg",
+    iconClass: "fas fa-store",
+    title: "Business Shops",
+    Features: [
+      "Apartment Bureaus",
+      "Condominium mall",
+      "Mixed use buildings",
+      "Recreational centers",
+    ],
+    detailsLink: "service-details.html",
+  },
+];
 
 function Category() {
   const serviceGridSliderRef = useRef(null);
@@ -15,6 +93,8 @@ function Category() {
         slidesToShow: 1,
         vertical: true,
         arrows: false,
+        cssEase: "ease-in-out",
+        speed: 500,
       });
 
       $(serviceSlideThumbRef.current).slick({
@@ -23,6 +103,8 @@ function Category() {
         vertical: true,
         focusOnSelect: true,
         arrows: false,
+        cssEase: "ease-in-out",
+        speed: 500,
       });
 
       $(".prev").click(() => {
@@ -43,13 +125,14 @@ function Category() {
   }, []);
 
   return (
-    <section className="bg-title space overflow-hidden" id="service-sec">
+    <section className="bg-title space overflow-hidden" id="category-sec">
       <div className="container">
         <div className="row justify-content-lg-between align-items-end">
           <div className="col-lg-7 mb-n2 mb-lg-0">
             <div className="title-area">
               <span className="sub-title7">
-                <span className="box" /> OUR PACKAGES
+                <span className="box" />
+                OUR PACKAGES
               </span>
               <h2 className="sec-title text-white">
                 We Provide Suitable Categories
@@ -64,74 +147,42 @@ function Category() {
               id="serviceGridSlider"
               ref={serviceGridSliderRef}
             >
-              {[
-                {
-                  imgSrc: "assets/img/update1/service/service_2_1_v2.jpg",
-                  iconSrc: "assets/img/update1/icon/service_1_1.svg",
-                  iconOverlaySrc: "assets/img/update1/icon/service_2_1.svg",
-                  title: "Building Construction",
-                  text: "Professionally benchmark real-time quality vectors for ubiquitous catalysts for change.",
-                  detailsLink: "service-details.html",
-                },
-                {
-                  imgSrc: "assets/img/update1/service/service_2_2_v2.jpg",
-                  iconSrc: "assets/img/update1/icon/service_1_2.svg",
-                  iconOverlaySrc: "assets/img/update1/icon/service_2_2.svg",
-                  title: "Projects Plannings",
-                  text: "Traditional to benchmark real-time quality vectors for ubiquitous catalysts for makeup.",
-                  detailsLink: "service-details.html",
-                },
-                {
-                  imgSrc: "assets/img/update1/service/service_2_3_v2.jpg",
-                  iconSrc: "assets/img/update1/icon/service_1_3.svg",
-                  iconOverlaySrc: "assets/img/update1/icon/service_2_3.svg",
-                  title: "Interior Developments",
-                  text: "Technical were benchmark real-time quality vectors for ubiquitous catalysts for change.",
-                  detailsLink: "service-details.html",
-                },
-                {
-                  imgSrc: "assets/img/update1/service/service_2_4.jpg",
-                  iconSrc: "assets/img/update1/icon/service_1_4.svg",
-                  iconOverlaySrc: "assets/img/update1/icon/service_2_4.svg",
-                  title: "Virtual design & build",
-                  text: "Get up for the benchmark real-time quality vectors for ubiquitous catalysts for geting.",
-                  detailsLink: "service-details.html",
-                },
-              ].map((service, index) => (
+              {Categories?.map((service, index) => (
                 <div key={index} className="col-md-6 col-lg-4 col-xl-3">
                   <div className="service-grid">
                     <div className="service-grid_img">
-                      <img src={service.imgSrc} alt="service image" />
+                      <img src={service.imgSrc} alt="Category Image" />
                     </div>
+
                     <div className="service-grid_content">
                       <div className="service-grid_icon">
-                        <img src={service.iconSrc} alt="Icon" />
+                        <i className={service.iconClass}></i>
                       </div>
                       <div className="service-grid_icon-overlay">
-                        <img src={service.iconOverlaySrc} alt="Icon" />
+                        <i className={service.iconClass}></i>
                       </div>
                       <h3 className="service-grid_title">
-                        <a href={service.detailsLink}>{service.title}</a>
+                        <a href="/">{service.title}</a>
                       </h3>
-                      <p className="service-grid_text">{service.text}</p>
+                      <h4 className="service-grid_text">{service.text}</h4>
                       <div className="checklist style5">
                         <ul>
-                          <li>Home Architecture</li>
-                          <li>Perfect Design</li>
-                          <li>Efficient Building</li>
-                          <li>Big Landspace</li>
+                          {service.Features?.map((feature, index) => (
+                            <li key={index}>{feature}</li>
+                          ))}
                         </ul>
                       </div>
-                      <a href={service.detailsLink} className="th-btn">
+                      <button className="th-btn">
                         VIEW DETAILS
                         <i className="fas fa-arrow-right ms-2" />
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+
           <div className="col-xl-4">
             <div className="service-thumb-wrap">
               <button className="arrow-btn prev">
@@ -144,29 +195,38 @@ function Category() {
               >
                 {[
                   {
-                    imgSrc:
-                      "assets/img/update1/service/service_thumb_2_1_v2.png",
-                    title: "Building Construction",
+                    imgSrc: "assets/img/properties/downtown.jpg",
+                    title: "Downtown (First Grade Central City Areas)",
                   },
                   {
-                    imgSrc:
-                      "assets/img/update1/service/service_thumb_2_2_v2.png",
-                    title: "Projects Plannings",
+                    imgSrc: "assets/img/properties/midtown.jpg",
+                    title: "Midtown (Second Grade central city areas)",
                   },
                   {
-                    imgSrc:
-                      "assets/img/update1/service/service_thumb_2_3_v2.png",
-                    title: "Interior Developments",
+                    imgSrc: "assets/img/properties/suburban.jpg",
+                    title: "SubUrb (third grade city margin areas)",
                   },
                   {
-                    imgSrc: "assets/img/update1/service/service_thumb_2_4.jpg",
-                    title: "Virtual design & build",
+                    imgSrc: "assets/img/properties/single-familly.jpg",
+                    title: "Single family",
+                  },
+                  {
+                    imgSrc: "assets/img/properties/diaspora.jpg",
+                    title: "Diaspora",
+                  },
+                  {
+                    imgSrc: "assets/img/properties/commercial.jpg",
+                    title: "Business Shops",
                   },
                 ].map((thumb, index) => (
                   <div key={index}>
                     <div className="service-thumb">
                       <div className="service-thumb_img">
-                        <img src={thumb.imgSrc} alt="service image" />
+                        <img
+                          src={thumb.imgSrc}
+                          alt="service image"
+                          className="categoryIcon"
+                        />
                       </div>
                       <h3 className="service-thumb_title">{thumb.title}</h3>
                     </div>

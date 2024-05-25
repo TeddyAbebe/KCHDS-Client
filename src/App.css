@@ -6,7 +6,7 @@
 
 .title-area .sub-title7 {
   font-size: 16px;
-  color: #f97300;
+  color: #cd9e32;
 }
 
 .title-area .sec-title {
@@ -14,7 +14,7 @@
 }
 
 .sec-btn .th-btn.style3 {
-  background-color: #f97300;
+  background-color: #cd9e32;
   color: #fff;
 }
 
@@ -69,12 +69,12 @@
   font-family: FontAwesome;
   position: absolute;
   left: 0;
-  color: #f97300;
+  color: #cd9e32;
 }
 
 .th-btn {
   display: inline-block;
-  background-color: #f97300;
+  background-color: #cd9e32;
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
@@ -118,7 +118,7 @@
 }
 
 .service-thumb_img img {
-  width: 100%;
+  width: 5rem;
   height: auto;
 }
 
@@ -132,4 +132,10 @@
 .flip-icon-container:hover .icon {
   color: white;
   transform: rotateY(180deg);
+}
+
+/* Category */
+.categoryIcon {
+  width: 1px;
+  height: 1px;
 }

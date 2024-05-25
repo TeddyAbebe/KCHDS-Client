@@ -6,7 +6,7 @@ const applicantRoles = [
     title: "Electing Representatives",
     description:
       "When electing representatives, it is crucial to consider key factors to ensure they can effectively serve your interests and bring positive change to your community.",
-    icon: "fal fa-vote",
+    icon: "fal fa-user-circle",
   },
   {
     title: "Opening and Maintaining Bank Accounts",
@@ -49,7 +49,7 @@ const applicantRoles = [
 function Role() {
   return (
     <Fragment>
-      <section className="space-top" id="service-sec">
+      <section className="space-top" id="role-sec">
         <div
           className="container"
           data-pos-space="#about-sec"
