@@ -4,7 +4,41 @@ import { toast, ToastContainer } from "react-toastify";
 import { registerMemberThunk } from "./slice"; // Replace with your actual import
 import "react-toastify/dist/ReactToastify.css"; // Ensure you have the CSS for react-toastify
 import { CgSpinner } from "react-icons/cg"; // Error occurs here
-// Mock data - replace these with your actual data
+
+const DiasporaSubCategories = [
+  "DownTown",
+  "MidTown",
+  "SubUrban",
+  "SingleFamily",
+  "Commercial",
+];
+const singleFamilySubCategories = ["Luxury", "Medium", "Fair"];
+
+const singleFamilySubSubCategories = ["Luxury", "Medium", "Fair"];
+
+const commercialSubCategories = [
+  "ApartmentBureaus",
+  "CondominiumMall",
+  "MixedUseBuildings",
+  "RecreationalCenters",
+];
+
+const commercialSubSubCategories = [
+  "ApartmentBureaus",
+  "CondominiumMall",
+  "MixedUseBuildings",
+  "RecreationalCenters",
+];
+
+const categories = [
+  "Diaspora",
+  "SingleFamily",
+  "DownTown",
+  "MidTown",
+  "SubUrban",
+  "Commercial",
+];
+
 const housingLocations = [
   "Addis Ababa",
   "Adama",
@@ -40,22 +74,6 @@ const housingLocations = [
 ];
 
 const AllHousingLocations = [...housingLocations];
-const commercialSubCategories = ["Office", "Retail"];
-const singleFamilySubSubCategories = ["SubSubCategory1", "SubSubCategory2"];
-const commercialSubSubCategories = ["SubSubCategory3", "SubSubCategory4"];
-const categories = [
-  "DownTown",
-  "MidTown",
-  "SubUrban",
-  "SingleFamily",
-  "Commercial",
-  "Diaspora",
-];
-const DiasporaSubCategories = ["DiasporaSubCategory1", "DiasporaSubCategory2"];
-const singleFamilySubCategories = [
-  "SingleFamilySubCategory1",
-  "SingleFamilySubCategory2",
-];
 
 const Signup = () => {
   const dispatch = useDispatch();
@@ -75,7 +93,7 @@ const Signup = () => {
 
     if (name === "category") {
       if (["DownTown", "MidTown", "SubUrban"].includes(value)) {
-        setFilteredHousingLocations(housingLocations[value]);
+        setFilteredHousingLocations(housingLocations);
       } else if (value === "SingleFamily") {
         setFilteredHousingLocations(AllHousingLocations);
       } else if (value === "Commercial") {
@@ -96,12 +114,15 @@ const Signup = () => {
     if (name === "subCategory") {
       if (value === "SingleFamily") {
         setFilteredSubSubCategories(singleFamilySubSubCategories);
+
         setFilteredHousingLocations(AllHousingLocations);
       } else if (["DownTown", "MidTown", "SubUrban"].includes(value)) {
         setFilteredSubSubCategories([]);
-        setFilteredHousingLocations(housingLocations[value]);
+
+        setFilteredHousingLocations(housingLocations);
       } else if (value === "Commercial") {
         setFilteredSubSubCategories(commercialSubSubCategories);
+
         setFilteredHousingLocations(AllHousingLocations);
       }
     }
@@ -216,7 +237,7 @@ const Signup = () => {
                     Select
                   </option>
 
-                  {categories.map((category) => (
+                  {categories?.map((category) => (
                     <option key={category} value={category}>
                       {category.replace(/([A-Z])/g, " $1").trim()}
                     </option>
@@ -240,21 +261,21 @@ const Signup = () => {
                       : "No Sub Category"}
                   </option>
                   {isDiaspora &&
-                    DiasporaSubCategories.map((subCategory) => (
+                    DiasporaSubCategories?.map((subCategory) => (
                       <option key={subCategory} value={subCategory}>
                         {subCategory.replace(/([A-Z])/g, " $1").trim()}
                       </option>
                     ))}
 
                   {isSingleFamily &&
-                    singleFamilySubCategories.map((subCategory) => (
+                    singleFamilySubCategories?.map((subCategory) => (
                       <option key={subCategory} value={subCategory}>
                         {subCategory}
                       </option>
                     ))}
 
                   {isCommercial &&
-                    filteredSubCategories.map((subCategory) => (
+                    filteredSubCategories?.map((subCategory) => (
                       <option key={subCategory} value={subCategory}>
                         {subCategory.replace(/([A-Z])/g, " $1").trim()}
                       </option>
@@ -276,7 +297,7 @@ const Signup = () => {
                       Select
                     </option>
 
-                    {filteredSubSubCategories.map((subSubCategory) => (
+                    {filteredSubSubCategories?.map((subSubCategory) => (
                       <option key={subSubCategory} value={subSubCategory}>
                         {subSubCategory.replace(/([A-Z])/g, " $1").trim()}
                       </option>
@@ -295,13 +316,12 @@ const Signup = () => {
                   onChange={handleInputChange}
                 >
                   <option value="" disabled selected>
-                    {/* {filteredHousingLocations.length === 0
+                    {filteredHousingLocations?.length === 0
                       ? "No Location"
-                      : "Select Location"} */}
-                    Select Location
+                      : "Select Location"}
                   </option>
 
-                  {filteredHousingLocations.map((location) => (
+                  {filteredHousingLocations?.map((location) => (
                     <option key={location} value={location}>
                       {location}
                     </option>
