@@ -74,9 +74,10 @@ function NavBar() {
                     className="th-menu-toggle d-block d-lg-none"
                     onClick={toggleMenu}
                   >
-                    <i className="far fa-bars" />
+                    <i
+                      className={isMenuOpen ? "far fa-times" : "far fa-bars"}
+                    />
                   </button>
-
                   {isMenuOpen && (
                     <div className="mobile-menu">
                       <nav className="main-menu">
@@ -99,24 +100,9 @@ function NavBar() {
                           <li className="menu-item-has-children">
                             <a href="#role-sec">Role</a>
                           </li>
+
                           <li>
-                            <button
-                              type="button"
-                              className="icon-btn searchBoxToggler"
-                            >
-                              <i className="far fa-search" />
-                            </button>
-                          </li>
-                          <li>
-                            <button
-                              type="button"
-                              className="icon-btn sideMenuToggler"
-                            >
-                              <i className="fas fa-grid" />
-                            </button>
-                          </li>
-                          <li>
-                            <a href="/signup" className="th-btn ml-20">
+                            <a href="/signup" className="th-btn text-xs ml-20">
                               Become A Member{" "}
                               <i className="fas fa-arrow-right ms-1" />
                             </a>
@@ -125,7 +111,6 @@ function NavBar() {
                       </nav>
                     </div>
                   )}
-                  
                 </div>
                 <div className="col-auto d-none d-xl-block">
                   <div className="row">
