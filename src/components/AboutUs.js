@@ -32,7 +32,7 @@ function AboutUs() {
                     Goal of Kegeberew Real Estate
                   </span>
                   <h2 className="sec-title">
-                    Real Estate Excellence, Your Lifestyle Upgrade
+                    <strong>ትብብር ቤት</strong>, Build Your Home Together!
                   </h2>
                 </div>
                 <p className="mt-n2 mb-25">

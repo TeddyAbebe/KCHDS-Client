@@ -92,6 +92,7 @@
 
 .service-thumb-wrap {
   position: relative;
+  padding-top: 10px; /* Adjust padding for visibility */
 }
 
 .service-thumb_wrap .arrow-btn {
@@ -101,11 +102,11 @@
 }
 
 .service-thumb_wrap .prev {
-  top: -30px;
+  top: 0; /* Adjust position */
 }
 
 .service-thumb_wrap .next {
-  bottom: -30px;
+  bottom: 0; /* Adjust position */
 }
 
 .service-thumb {
@@ -136,6 +137,11 @@
 
 /* Category */
 .categoryIcon {
-  width: 1px;
-  height: 1px;
+  width: auto; /* Adjusted to auto to maintain aspect ratio */
+  height: auto;
+}
+
+#serviceSlideThumb {
+  max-height: 500px;
+  overflow-y: hidden;
 }

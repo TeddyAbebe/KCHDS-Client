@@ -95,16 +95,18 @@ function Category() {
         arrows: false,
         cssEase: "ease-in-out",
         speed: 500,
+        infinite: false,
       });
 
       $(serviceSlideThumbRef.current).slick({
         asNavFor: serviceGridSliderRef.current,
-        slidesToShow: 3,
+        slidesToShow: 2,
         vertical: true,
         focusOnSelect: true,
         arrows: false,
         cssEase: "ease-in-out",
         speed: 500,
+        verticalSwiping: true,
       });
 
       $(".prev").click(() => {
@@ -140,6 +142,7 @@ function Category() {
             </div>
           </div>
         </div>
+
         <div className="row align-items-center">
           <div className="col-xl-8">
             <div
@@ -162,7 +165,7 @@ function Category() {
                         <i className={service.iconClass}></i>
                       </div>
                       <h3 className="service-grid_title">
-                        <a href="/">{service.title}</a>
+                        <a href={service.detailsLink}>{service.title}</a>
                       </h3>
                       <h4 className="service-grid_text">{service.text}</h4>
                       <div className="checklist style5">

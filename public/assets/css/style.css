@@ -5663,7 +5663,7 @@ ol.wp-block-rss {
   position: relative;
 }
 .main-menu ul li.menu-item-has-children > a:after {
-  content: "\2b";
+  content: "\f068";
   position: relative;
   font-family: var(--icon-font);
   margin-left: 5px;
@@ -5677,10 +5677,7 @@ ol.wp-block-rss {
   display: inline-block;
 }
 .main-menu ul li.menu-item-has-children > a:hover:after {
-  content: "\f068";
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+  content: "\f078";
 }
 .main-menu ul li:last-child {
   margin-right: 0 !important;

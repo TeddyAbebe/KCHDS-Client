@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React, { Fragment } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -25,7 +26,9 @@ function HeroSection() {
             <div
               className="th-hero-bg"
               style={{
-                backgroundImage: "url(assets/img/hero/hero_bg_5_1.jpg)",
+                backgroundImage: "url(assets/img/properties/downtown.jpg)",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
               }}
             />
             <div className="container">
@@ -37,37 +40,28 @@ function HeroSection() {
                       data-ani="slideinup"
                       data-ani-delay="0.1s"
                     >
-                      Design is making sense of things
+                      Crafting Dreams Together
                     </span>
                     <h1
                       className="hero-title text-white"
                       data-ani="slideinup"
                       data-ani-delay="0.4s"
                     >
-                      Crafting Beauty In <span>Architecture</span>
+                      Building Communities, Building Dreams
                     </h1>
-                    <div
-                      className="btn-group"
-                      data-ani="slideinup"
-                      data-ani-delay="0.8s"
-                    >
-                      <a href="project.html" className="th-btn style3">
-                        View Projects <i className="fas fa-arrow-right ms-2" />
-                      </a>
-                      <a href="about.html" className="th-btn style2">
-                        Our Story <i className="fas fa-arrow-right ms-2" />
-                      </a>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
           <div className="th-hero-slide">
             <div
               className="th-hero-bg"
               style={{
-                backgroundImage: "url(assets/img/hero/hero_bg_5_2.jpg)",
+                backgroundImage: "url(assets/img/properties/midtown.jpg)",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
               }}
             />
             <div className="container">
@@ -79,37 +73,28 @@ function HeroSection() {
                       data-ani="slideinup"
                       data-ani-delay="0.1s"
                     >
-                      Inspiration, Innovation, and Architecture.
+                      Building Together for a Better Tomorrow
                     </span>
                     <h1
                       className="hero-title text-white"
                       data-ani="slideinup"
                       data-ani-delay="0.4s"
                     >
-                      Where Vision Meets <span>Architect</span>
+                      Collaborating to Create Inspiring Spaces
                     </h1>
-                    <div
-                      className="btn-group"
-                      data-ani="slideinup"
-                      data-ani-delay="0.8s"
-                    >
-                      <a href="project.html" className="th-btn style3">
-                        View Projects <i className="fas fa-arrow-right ms-2" />
-                      </a>
-                      <a href="about.html" className="th-btn style2">
-                        Our Story <i className="fas fa-arrow-right ms-2" />
-                      </a>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
           <div className="th-hero-slide">
             <div
               className="th-hero-bg"
               style={{
-                backgroundImage: "url(assets/img/hero/hero_bg_5_3.jpg)",
+                backgroundImage: "url(assets/img/properties/suburban.jpg)",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
               }}
             />
             <div className="container">
@@ -121,27 +106,15 @@ function HeroSection() {
                       data-ani="slideinup"
                       data-ani-delay="0.1s"
                     >
-                      Architects of Innovation and Imagination.
+                      Dreaming Together, Building Tomorrow
                     </span>
                     <h1
                       className="hero-title text-white"
                       data-ani="slideinup"
                       data-ani-delay="0.4s"
                     >
-                      Designing Dreams Inspire <span>Architect</span>
+                      Together, We Shape the Future
                     </h1>
-                    <div
-                      className="btn-group"
-                      data-ani="slideinup"
-                      data-ani-delay="0.8s"
-                    >
-                      <a href="project.html" className="th-btn style3">
-                        View Projects <i className="fas fa-arrow-right ms-2" />
-                      </a>
-                      <a href="about.html" className="th-btn style2">
-                        Our Story <i className="fas fa-arrow-right ms-2" />
-                      </a>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -149,9 +122,7 @@ function HeroSection() {
           </div>
         </Slider>
         <div className="scroll-down">
-          <a href="#about-sec" className="hero-5-scroll-wrap">
-            Scroll
-          </a>
+          <a href="#about-sec" className="hero-5-scroll-wrap"></a>
         </div>
       </div>
     </Fragment>

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 
 function Footer() {
@@ -5,6 +6,7 @@ function Footer() {
     <footer
       className="footer-wrapper footer-layout-default"
       data-bg-src="assets/img/bg/footer-bg.png"
+      id="footer-sec"
     >
       <div className="widget-area space-top">
         <div className="container">
@@ -12,16 +14,22 @@ function Footer() {
             <div className="col-md-6 col-xxl-3 col-xl-3">
               <div className="widget footer-widget">
                 <div className="th-widget-about">
-                  <div className="about-logo">
-                    <a href="index.html">
-                      <img src="assets/img/logo-white.svg" alt="Konta" />
-                    </a>
+                  <div className="about-logo text-3xl text-center">
+                    {/* <a href="index.html">
+                      <img src="assets/img/logo-white.svg" alt="ትብብር ቤት" />
+                    </a> */}
+                    ትብብር ቤት
                   </div>
                   <p className="about-text">
-                    Quickly supply alternative strategic theme areas vis-à-vis
-                    B2C mindshare. Objectively repurpose stand-alone. and
-                    managing contractual agreement. A reliable company ensures.
+                    Kegeberew Real Estate is committed to revolutionizing the
+                    way homes are built. We believe in collaborative
+                    construction, empowering individuals to shape their dream
+                    homes within their means. By offering flexible options and
+                    prioritizing community involvement, we aim to redefine the
+                    housing industry. Together, let's build a future where
+                    everyone can realize their homeownership dreams.
                   </p>
+
                   <div className="th-social">
                     <a href="https://www.facebook.com/">
                       <i className="fab fa-facebook-f" />
@@ -41,80 +49,26 @@ function Footer() {
             </div>
             <div className="col-md-6 col-xl-auto">
               <div className="widget widget_nav_menu footer-widget">
-                <h3 className="widget_title">About Us</h3>
-                <div className="menu-all-pages-container">
-                  <ul className="menu">
-                    <li>
-                      <a href="about.html">About Us</a>
-                    </li>
-                    <li>
-                      <a href="service.html">Services</a>
-                    </li>
-                    <li>
-                      <a href="project.html">Projects</a>
-                    </li>
-                    <li>
-                      <a href="blog.html">Blog</a>
-                    </li>
-                    <li>
-                      <a href="pricing.html">Pricing Plans</a>
-                    </li>
-                    <li>
-                      <a href="contact.html">Contact Us</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-xl-auto">
-              <div className="widget widget_nav_menu footer-widget">
-                <h3 className="widget_title">Support</h3>
-                <div className="menu-all-pages-container">
-                  <ul className="menu">
-                    <li>
-                      <a href="service-details.html">View All Services</a>
-                    </li>
-                    <li>
-                      <a href="service-details.html">Service Details</a>
-                    </li>
-                    <li>
-                      <a href="project.html">Our Projects</a>
-                    </li>
-                    <li>
-                      <a href="project-details.html">Project Details</a>
-                    </li>
-                    <li>
-                      <a href="blog-details.html">Our Clients</a>
-                    </li>
-                    <li>
-                      <a href="blog-details.html">Single Post</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-xl-auto">
-              <div className="widget widget_nav_menu footer-widget">
                 <h3 className="widget_title">Quick Links</h3>
                 <div className="menu-all-pages-container">
                   <ul className="menu">
                     <li>
-                      <a href="team.html">Team Member</a>
+                      <a href="#hero">Home</a>
                     </li>
                     <li>
-                      <a href="blog.html">Testimonials</a>
+                      <a href="#about-sec">About Us</a>
                     </li>
                     <li>
-                      <a href="about.html">Company History</a>
+                      <a href="#category-sec">Category</a>
                     </li>
                     <li>
-                      <a href="team.html">Need a Career?</a>
+                      <a href="#service-sec">Services</a>
                     </li>
                     <li>
-                      <a href="faq.html">FAQs</a>
+                      <a href="#steps-sec">Steps</a>
                     </li>
                     <li>
-                      <a href="pricing.html">Our Process</a>
+                      <a href="#role-sec">Role</a>
                     </li>
                   </ul>
                 </div>
@@ -183,7 +137,7 @@ function Footer() {
           <div className="row justify-content-between align-items-center">
             <div className="col-md-6">
               <p className="copyright-text">
-                Copyright © 2023 <a href="index.html">Konta</a> All Rights
+                Copyright © 2023 <a href="#footer-sec">ትብብር ቤት</a> All Rights
                 Reserved.
               </p>
             </div>
@@ -191,10 +145,10 @@ function Footer() {
               <div className="footer-links">
                 <ul>
                   <li>
-                    <a href="about.html">Privacy Policy</a>
+                    <a href="#footer-sec">Privacy Policy</a>
                   </li>
                   <li>
-                    <a href="about.html">Terms &amp; Condition</a>
+                    <a href="#footer-sec">Terms &amp; Condition</a>
                   </li>
                 </ul>
               </div>

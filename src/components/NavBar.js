@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 function NavBar() {
   return (
     <Fragment>
-      <header className="th-header header-layout-default">
+      <header className="th-header header-layout-default" id="navBar-sec">
         <div className="header-top">
           <div className="container th-container">
             <div className="row justify-content-center justify-content-lg-between align-items-center gy-2">
@@ -84,7 +84,7 @@ function NavBar() {
                         >
                           <i className="fas fa-grid" />
                         </button>
-                        <a href="contact.html" className="th-btn ml-20">
+                        <a href="#navBar-sec" className="th-btn ml-20">
                           Become A Member{" "}
                           <i className="fas fa-arrow-right ms-1" />
                         </a>
