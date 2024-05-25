@@ -31,13 +31,14 @@ function NavBar() {
             <div className="container th-container">
               <div className="row align-items-center justify-content-between">
                 <div className="col-auto">
-                  <div className="header-log text-3xl ml-14">ትብብር ቤት</div>
+                  <div className="header-log text-3xl ml-14">
+                    <img style={{width:'80px', height:'80px'}} src="assets/img/pbe-RE_logo-01-removebg-preview.png"></img>ትብብር ቤት</div>
                 </div>
                 <div className="col-auto ml-10">
                   <nav className="main-menu d-none d-lg-inline-block">
                     <ul>
                       <li className="menu-item-has-children">
-                        <a href="#hero">Home</a>
+                        <a href="/">Home</a>
                       </li>
 
                       <li className="menu-item-has-children">
@@ -84,7 +85,7 @@ function NavBar() {
                         >
                           <i className="fas fa-grid" />
                         </button>
-                        <a href="#navBar-sec" className="th-btn ml-20">
+                        <a href="/signup" className="th-btn ml-20">
                           Become A Member{" "}
                           <i className="fas fa-arrow-right ms-1" />
                         </a>

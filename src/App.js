@@ -11,7 +11,6 @@ import Steps from "./components/Steps";
 function App() {
   return (
     <div>
-      <NavBar />
       <HeroSection />
       <AboutUs />
       <Category />
