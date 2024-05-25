@@ -44,7 +44,7 @@ const Categories = [
     detailsLink: "service-details.html",
   },
   {
-    imgSrc: "assets/img/properties/single_familly.jpg",
+    imgSrc: "assets/img/properties/single-familly.jpg",
     iconClass: "fas fa-home",
     title: "Single family",
     text: "4-12 million Birr",
@@ -69,7 +69,7 @@ const Categories = [
     detailsLink: "service-details.html",
   },
   {
-    imgSrc: "assets/img/properties/business_shops.jpg",
+    imgSrc: "assets/img/properties/commercial.jpg",
     iconClass: "fas fa-store",
     title: "Business Shops",
     Features: [

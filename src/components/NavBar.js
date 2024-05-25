@@ -12,7 +12,7 @@ function NavBar() {
                   <ul>
                     <li>
                       <i className="far fa-phone" />
-                      <a href="tel:9064">9064</a>
+                      <a href="tel:9046">9046</a>
                     </li>
                     <li className="d-none d-xl-inline-block">
                       <i className="far fa-envelope" />
