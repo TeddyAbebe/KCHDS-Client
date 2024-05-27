@@ -80,50 +80,79 @@ function Footer() {
                 <div className="widget-gallery">
                   <div className="gallery-thumb">
                     <img
-                      src="assets/img/widget/gallery_1_1.jpg"
+                      src="assets/img/properties/downtown.jpg"
                       alt="Gallery Image"
                     />
                     <a
-                      href="assets/img/widget/gallery_1_1.jpg"
+                      href="assets/img/properties/downtown.jpg"
                       className="gallery-btn popup-image"
                     >
-                      <i className="fab fa-instagram" />
+                      <i className="fa-solid fa-eye" />
                     </a>
                   </div>
+
                   <div className="gallery-thumb">
                     <img
-                      src="assets/img/widget/gallery_1_2.jpg"
+                      src="assets/img/properties/midtown.jpg"
                       alt="Gallery Image"
                     />
                     <a
-                      href="assets/img/widget/gallery_1_2.jpg"
+                      href="assets/img/properties/midtown.jpg"
                       className="gallery-btn popup-image"
                     >
-                      <i className="fab fa-instagram" />
+                      <i className="fa-solid fa-eye" />
                     </a>
                   </div>
+
                   <div className="gallery-thumb">
                     <img
-                      src="assets/img/widget/gallery_1_3.jpg"
+                      src="assets/img/properties/single-familly.jpg"
                       alt="Gallery Image"
                     />
                     <a
-                      href="assets/img/widget/gallery_1_3.jpg"
+                      href="assets/img/properties/single-familly.jpg"
                       className="gallery-btn popup-image"
                     >
-                      <i className="fab fa-instagram" />
+                      <i className="fa-solid fa-eye" />
                     </a>
                   </div>
+
                   <div className="gallery-thumb">
                     <img
-                      src="assets/img/widget/gallery_1_4.jpg"
+                      src="assets/img/properties/suburban.jpg"
                       alt="Gallery Image"
                     />
                     <a
-                      href="assets/img/widget/gallery_1_4.jpg"
+                      href="assets/img/properties/suburban.jpg"
                       className="gallery-btn popup-image"
                     >
-                      <i className="fab fa-instagram" />
+                      <i className="fa-solid fa-eye" />
+                    </a>
+                  </div>
+
+                  <div className="gallery-thumb">
+                    <img
+                      src="assets/img/properties/diaspora.jpg"
+                      alt="Gallery Image"
+                    />
+                    <a
+                      href="assets/img/properties/diaspora.jpg"
+                      className="gallery-btn popup-image"
+                    >
+                      <i className="fa-solid fa-eye" />
+                    </a>
+                  </div>
+
+                  <div className="gallery-thumb">
+                    <img
+                      src="assets/img/properties/commercial.jpg"
+                      alt="Gallery Image"
+                    />
+                    <a
+                      href="assets/img/properties/commercial.jpg"
+                      className="gallery-btn popup-image"
+                    >
+                      <i className="fa-solid fa-eye" />
                     </a>
                   </div>
                 </div>
