@@ -1,13 +1,11 @@
 import axios from "axios";
 import { BASE_URL, getUserInfo } from "../utils/constants";
-import { ILoginProps, IRegisterMember } from "./types";
 
 const userInfo = getUserInfo();
 
 // Register Memeber
 // async function registerNewMember(membersData: IRegisterMember) {
 async function registerNewMember(membersData) {
-
   try {
     // Retrieve token from localStorage
     const Token = userInfo ? userInfo.token : null;
@@ -37,7 +35,6 @@ async function registerNewMember(membersData) {
 // User Logging
 // async function loginUser({ phoneNumber, password }: ILoginProps) {
 async function loginUser({ phoneNumber, password }) {
-
   try {
     const response = await axios.post(`${BASE_URL}user/login`, {
       phoneNumber,
@@ -86,7 +83,6 @@ async function fetchAllGroups() {
 // Get Single Group
 // async function fetchSingleGroup(id: string) {
 async function fetchSingleGroup(id) {
-
   try {
     // Retrieve token from localStorage
     const Token = userInfo ? userInfo.token : null;

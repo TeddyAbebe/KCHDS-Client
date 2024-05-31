@@ -1,10 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IRegisterMember } from "../types";
-
-// interface UserInfoState {
-//   token: string | null;
-//   user: IRegisterMember | null;
-// }
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   token: localStorage.getItem("userInfo")

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Dispatch, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 // import { IMemberRegisterState, NewMember } from "./types";
 import { registerNewMember } from "../../api";
 
@@ -10,22 +10,18 @@ const initialState = {
 };
 
 // Thunk action creator for registering a new Member
-export const registerMemberThunk =
-  // (memberData: NewMember) => async (dispatch: Dispatch) => {
-  (memberData) => async (dispatch) => {
+export const registerMemberThunk = (memberData) => async (dispatch) => {
+  try {
+    const newMember = await registerNewMember(memberData);
+    dispatch(registerNewMemberSuccess(newMember.member));
 
-    try {
-      const newMember = await registerNewMember(memberData);
-      dispatch(registerNewMemberSuccess(newMember.member));
-
-      return newMember;
-      // } catch (error: any) {
-    } catch (error) {
-      
-      dispatch(registerNewMemberFailure(error.response.data.message));
-      throw error.response.data.message;
-    }
-  };
+    return newMember;
+    // } catch (error: any) {
+  } catch (error) {
+    dispatch(registerNewMemberFailure(error.response.data.message));
+    throw error.response.data.message;
+  }
+};
 
 const registerMember = createSlice({
   name: "registerMember",
