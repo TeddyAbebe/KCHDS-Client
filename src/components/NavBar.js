@@ -37,7 +37,7 @@ function NavBar() {
             <div className="container th-container">
               <div className="row align-items-center justify-content-between">
                 <div className="col-auto">
-                  <div className="header-log text-3xl ml-14">
+                  <div className="header-log text-xl sm:text-3xl sm:ml-14">
                     <img
                       style={{ width: "80px", height: "80px" }}
                       src="assets/img/pbe-RE_logo-01-removebg-preview.png"
@@ -79,7 +79,7 @@ function NavBar() {
                     />
                   </button>
                   {isMenuOpen && (
-                    <div className="mobile-menu">
+                    <div className="mobile-menu pl-5">
                       <nav className="main-menu">
                         <ul>
                           <li className="menu-item-has-children">
@@ -101,12 +101,12 @@ function NavBar() {
                             <a href="#role-sec">Role</a>
                           </li>
 
-                          <li>
-                            <a href="/signup" className="th-btn text-xs ml-20">
+                          <button className="bg-[#D7B15B] mx-auto p-3 rounded-md my-2 h-10 flex overflow-hidden justify-center items-center">
+                            <a href="/signup" className="text-xs">
                               Become A Member{" "}
-                              <i className="fas fa-arrow-right ms-1" />
+                              <i className="fas fa-arrow-right" />
                             </a>
-                          </li>
+                          </button>
                         </ul>
                       </nav>
                     </div>

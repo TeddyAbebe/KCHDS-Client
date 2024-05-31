@@ -146,7 +146,7 @@ const Signup = () => {
   return (
     <>
       <ToastContainer autoClose={3000} hideProgressBar position="top-center" />
-      <div className="sm:w-[70%] h-screen flex items-center mx-auto justify-center">
+      <div className="sm:w-[70%] h-screen pt-44 flex items-center mx-auto justify-center">
         <form
           className="w-full px-5 pb-5 border border-gray-300 rounded-md mt-56 sm:mt-20 flex flex-col sm:gap-10 mb-20"
           onSubmit={handleSubmit}
@@ -224,7 +224,7 @@ const Signup = () => {
             </div>
 
             <div className="flex flex-wrap justify-between gap-4 w-full">
-              <div className="sm:mb-4 mb-3 w-36 sm:w-40">
+              <div className="sm:mb-4 mb-3 w-full sm:w-40">
                 <label className="block text-gray-700 text-sm font-bold mb-2">
                   Category
                 </label>
@@ -245,7 +245,7 @@ const Signup = () => {
                 </select>
               </div>
 
-              <div className="sm:mb-4 mb-3 w-36 sm:w-40">
+              <div className="sm:mb-4 mb-3 w-full sm:w-40">
                 <label className="block text-gray-700 text-sm font-bold mb-2">
                   Sub Category
                 </label>
@@ -284,7 +284,7 @@ const Signup = () => {
               </div>
 
               {filteredSubSubCategories.length > 0 && (
-                <div className="sm:mb-4 mb-3 w-36 sm:w-40">
+                <div className="sm:mb-4 mb-3 w-full sm:w-40">
                   <label className="block text-gray-700 text-sm font-bold mb-2">
                     Sub-Sub Category
                   </label>
@@ -306,7 +306,7 @@ const Signup = () => {
                 </div>
               )}
 
-              <div className="sm:mb-4 mb-3 w-36 sm:w-40">
+              <div className="sm:mb-4 mb-3 w-full sm:w-40">
                 <label className="block text-gray-700 text-sm font-bold mb-2">
                   Housing Location
                 </label>
@@ -333,7 +333,7 @@ const Signup = () => {
 
           <button
             type="submit"
-            className="bg-slate-950 hover:bg-[#D7A022] text-white font-bold w-1/3 mx-auto py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-slate-950 hover:bg-[#D7A022] text-white font-bold sm:w-1/3 mx-auto py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             {loading ? (
               <CgSpinner size={28} className="animate-spin " />
