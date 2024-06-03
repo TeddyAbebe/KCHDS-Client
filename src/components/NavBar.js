@@ -116,18 +116,6 @@ function NavBar() {
                   <div className="row">
                     <div className="col-auto">
                       <div className="header-button">
-                        <button
-                          type="button"
-                          className="icon-btn searchBoxToggler"
-                        >
-                          <i className="far fa-search" />
-                        </button>
-                        <button
-                          type="button"
-                          className="icon-btn sideMenuToggler"
-                        >
-                          <i className="fas fa-grid" />
-                        </button>
                         <a href="/signup" className="th-btn ml-20">
                           Become A Member{" "}
                           <i className="fas fa-arrow-right ms-1" />
