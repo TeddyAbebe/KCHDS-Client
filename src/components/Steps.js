@@ -106,7 +106,10 @@ function Steps() {
             </span>
             <h2 className="sec-title text-white">STEPS WE FOLLOW</h2>
           </div>
-          <div className="row gy-40 justify-content-between overflow-auto flex-nowrap">
+          <div
+            id="steps-container"
+            className="row gy-40 justify-content-between overflow-auto flex-nowrap"
+          >
             {steps.map((step, index) => (
               <div
                 className="col-sm-6 col-lg-auto process-card2-wrap"
@@ -124,6 +127,12 @@ function Steps() {
           </div>
         </div>
       </section>
+      <div className="flex justify-center md:hidden">
+        <button className="text-white bg-gray-800 px-10 py-2 rounded-full">
+          <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
     </Fragment>
   );
 }

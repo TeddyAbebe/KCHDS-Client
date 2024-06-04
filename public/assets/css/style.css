@@ -21556,13 +21556,14 @@ span.select2-selection.select2-selection--single:focus {
   transition: 0.4s ease-in-out;
 }
 .process-card2_title {
-  font-size: 20px;
+  font-size: 14px;
+  font-weight: bolder;
   margin-bottom: 8px;
   text-align: center;
 }
 .process-card2_text {
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 10px;
 }
 .process-card2:hover:before {
   -webkit-animation: spin 10s linear infinite;
