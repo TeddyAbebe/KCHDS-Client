@@ -4,6 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 import { registerMemberThunk } from "./slice"; // Replace with your actual import
 import "react-toastify/dist/ReactToastify.css"; // Ensure you have the CSS for react-toastify
 import { CgSpinner } from "react-icons/cg"; // Error occurs here
+import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 
 const DiasporaSubCategories = [
   "DownTown",
@@ -86,6 +87,7 @@ const Signup = () => {
   const [isCommercial, setIsCommercial] = useState(false);
   const [filteredSubSubCategories, setFilteredSubSubCategories] = useState([]);
   const [filteredSubCategories, setFilteredSubCategories] = useState([]);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -196,17 +198,27 @@ const Signup = () => {
                 />
               </div>
 
-              <div className="sm:mb-4 mb-3 w-full sm:w-[40%]">
+              <div className="sm:mb-4 mb-3 w-full sm:w-[40%] relative">
                 <label className="block text-gray-700 text-sm font-bold mb-2">
                   Password
                 </label>
                 <input
-                  type="text"
+                  type={showPassword ? "text" : "password"}
                   name="password"
                   placeholder="Password"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow appearance-none border rounded w-full py-2 pr-10 pl-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   onChange={handleInputChange}
                 />
+                <div
+                  className="absolute top-[30%] right-0 px-2 flex items-center cursor-pointer rounded-md h-14 justify-center"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? (
+                    <IoIosEyeOff size={24} />
+                  ) : (
+                    <IoIosEye size={24} />
+                  )}
+                </div>
               </div>
 
               <div className="sm:mb-4 mb-3 w-full sm:w-[40%]">
@@ -333,10 +345,10 @@ const Signup = () => {
 
           <button
             type="submit"
-            className="bg-slate-950 hover:bg-[#D7A022] text-white font-bold sm:w-1/3 mx-auto py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-slate-950 hover:bg-[#D7A022] text-white font-bold sm:w-[35%] mx-auto py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             {loading ? (
-              <CgSpinner size={28} className="animate-spin " />
+              <CgSpinner size={24} className="animate-spin mx-[20px]" />
             ) : (
               "Register"
             )}
